@@ -1,0 +1,27 @@
+.img_container{
+    width: 50%;
+    position: relative;
+}
+
+.img_container img{
+    width: 100%;
+    display: block;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+}
+
+.img_container button{
+    position: absolute;
+    height: fit-content;
+    transform: translateX(-50%);
+}
+
+.img_container button#button_up{
+    top: 0;
+    left: 50%;
+}
+
+.img_container button#button_down{
+    bottom: 0;
+    left: 50%;
+}
