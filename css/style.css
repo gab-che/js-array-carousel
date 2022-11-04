@@ -4,7 +4,7 @@
     position: relative;
 }
 
-.img_container img{
+.img_container .img_carousel{
     width: 100%;
     display: block;
     aspect-ratio: 16/9;
