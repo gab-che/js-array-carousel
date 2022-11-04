@@ -1,4 +1,5 @@
 .img_container{
+    margin: auto;
     width: 50%;
     position: relative;
 }
@@ -24,4 +25,10 @@
 .img_container button#button_down{
     bottom: 0;
     left: 50%;
+}
+
+.hidden{
+    position: absolute;
+    top: 0;
+    opacity: 0;
 }
