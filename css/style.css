@@ -6,7 +6,6 @@
 
 .img_container .img_carousel{
     width: 100%;
-    display: block;
     aspect-ratio: 16/9;
     object-fit: cover;
 }
@@ -15,6 +14,15 @@
     position: absolute;
     height: fit-content;
     transform: translateX(-50%);
+    color: black;
+    width: 20px;
+    aspect-ratio: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.493);
+    font-weight: bold;
 }
 
 .img_container button#button_up{
