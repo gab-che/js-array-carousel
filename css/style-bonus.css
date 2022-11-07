@@ -1,21 +1,30 @@
 .img_container{
     margin: auto;
     width: 50%;
+    aspect-ratio: 16/9;
     position: relative;
 }
 
 .img_container .img_carousel{
     width: 100%;
+    height: 100%;
     aspect-ratio: 16/9;
     object-fit: cover;
+    position: absolute;
+    opacity: 0;
+    transition: opacity .3s;
 }
 
-.img_container button{
+.img_carousel.visible{
+    opacity: 1;
+}
+
+button{
     position: absolute;
     height: fit-content;
     transform: translateX(-50%);
     color: black;
-    width: 20px;
+    width: 30px;
     aspect-ratio: 1;
     display: flex;
     justify-content: center;
@@ -23,14 +32,15 @@
     border-radius: 50%;
     background-color: rgba(255, 255, 255, 0.493);
     font-weight: bold;
+    z-index: 10;
 }
 
-.img_container button#button_up{
+button#button_up{
     top: 0;
     left: 50%;
 }
 
-.img_container button#button_down{
+button#button_down{
     bottom: 0;
     left: 50%;
 }
