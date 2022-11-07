@@ -13,6 +13,7 @@ const imgList = [
 let currentIndex = 0;
 const lastIndex = imgList.length - 1;
 const imgContainer = document.querySelector(".img_container");
+const thumbContainer = document.querySelector(".thumbnail_container");
 const btnUp = document.getElementById("button_up");
 const btnDown = document.getElementById("button_down");
 
@@ -23,22 +24,36 @@ for (let i = 0; i < imgList.length; i++){
     newImg.classList.add("img_carousel");
     newImg.src = currentImg;
 
+    const newThumb = document.createElement("img");
+    newThumb.classList.add("img_thumbnail");
+    newThumb.src = currentImg;
+
     if (i === currentIndex){
         newImg.classList.add("visible");
+        newThumb.classList.add("visible");
     }
 
     imgContainer.append(newImg);
+    thumbContainer.append(newThumb);
 }
 
 
 //prova funzione
 function toggleVisibility(){
-    const oldActive = imgContainer.querySelector(".visible");
-    oldActive.classList.remove("visible");
+    const oldActiveImg = imgContainer.querySelector(".visible");
+    const oldActiveThumb = thumbContainer.querySelector(".visible");
+
+    oldActiveImg.classList.remove("visible");
+    oldActiveThumb.classList.remove("visible");
 
     const allImgs = imgContainer.querySelectorAll("img");
-    const newActive = allImgs[currentIndex];
-    newActive.classList.add("visible");
+    const allThumbs = thumbContainer.querySelectorAll("img");
+
+    const newActiveImg = allImgs[currentIndex];
+    const newThumb = allThumbs[currentIndex];
+
+    newActiveImg.classList.add("visible");
+    newThumb.classList.add("visible");
 }
 
 btnDown.addEventListener("click", function(){
